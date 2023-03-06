@@ -1,6 +1,6 @@
 package Model;
 
-public class Animals {
+public class Animal {
     private short age;
     private float size;
     private String name;
@@ -12,7 +12,7 @@ public class Animals {
     private String allergies;
     private String feeding;
 
-    public Animals(short age, float size, String name, String species, boolean dangerous, String psychological,
+    public Animal(short age, float size, String name, String species, boolean dangerous, String psychological,
             String acquisitionMethod, short foodFrequencyPerDay, String allergies, String feeding) {
         this.age = age;
         this.size = size;
@@ -106,5 +106,4 @@ public class Animals {
         this.feeding = feeding;
     }
 
-    
 }
