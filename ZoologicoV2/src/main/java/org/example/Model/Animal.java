@@ -1,19 +1,21 @@
-package Model;
+package org.example.Model;
+
+import org.json.simple.JSONObject;
 
 public class Animal {
-    private short age;
+    private int age;
     private float size;
     private String name;
     private String species;
     private boolean dangerous;
     private String psychological;
     private String acquisitionMethod;
-    private short foodFrequencyPerDay;
+    private int foodFrequencyPerDay;
     private String allergies;
     private String feeding;
+    private JSONObject animalJSON = new JSONObject();
 
-    public Animal(short age, float size, String name, String species, boolean dangerous, String psychological,
-            String acquisitionMethod, short foodFrequencyPerDay, String allergies, String feeding) {
+    public Animal(int age, int size, String name, String species, boolean dangerous, String psychological, String acquisitionMethod, int foodFrequencyPerDay, String allergies, String feeding) {
         this.age = age;
         this.size = size;
         this.name = name;
@@ -26,7 +28,21 @@ public class Animal {
         this.feeding = feeding;
     }
 
-    public short getAge() {
+    public JSONObject getJSON() {
+        this.animalJSON.put("age", this.age);
+        this.animalJSON.put("name", this.name);
+        this.animalJSON.put("size", this.size);
+        this.animalJSON.put("species", this.dangerous);
+        this.animalJSON.put("psychological", this.psychological);
+        this.animalJSON.put("acquisitionMethod", this.acquisitionMethod);
+        this.animalJSON.put("foodFrequencyPerDays", this.foodFrequencyPerDay);
+        this.animalJSON.put("allergies", this.allergies);
+        this.animalJSON.put("feeding", this.feeding);
+        System.out.println(this.animalJSON);
+        return this.animalJSON;
+    }
+
+    public int getAge() {
         return age;
     }
 
@@ -82,7 +98,7 @@ public class Animal {
         this.acquisitionMethod = acquisitionMethod;
     }
 
-    public short getFoodFrequencyPerDay() {
+    public int getFoodFrequencyPerDay() {
         return foodFrequencyPerDay;
     }
 
