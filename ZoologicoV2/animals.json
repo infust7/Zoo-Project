@@ -1,26 +1,16 @@
 {
   "Animales": [
     {
-      "allergies": "none",
-      "foodFrequencyPerDays": 3,
-      "psychological": "no dangerous",
+      "allergies": "None",
+      "foodFrequencyPerDays": 12,
+      "psychological": "fear",
       "size": 12.0,
-      "species": true,
-      "acquisitionMethod": "born",
-      "feeding": "vegetables",
+      "species": "Caballus",
+      "acquisitionMethod": "Adopted",
+      "feeding": "Vegetables",
       "name": "Caballo",
-      "age": 10
-    },
-    {
-      "allergies": "none",
-      "foodFrequencyPerDays": 3,
-      "psychological": "no dangerous",
-      "size": 12.0,
-      "species": true,
-      "acquisitionMethod": "born",
-      "feeding": "vegetables",
-      "name": "Cocodrilo",
-      "age": 10
+      "dangerous": false,
+      "age": 20
     }
   ]
 }

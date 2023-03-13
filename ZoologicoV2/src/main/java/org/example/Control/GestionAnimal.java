@@ -40,13 +40,18 @@ public class GestionAnimal {
         }
     }
 
-    public void createAnimal(String name) {
-        this.animalsArray.add(new Animal(10,12,name,"Caballus",true,"no dangerous","born",3,"none","vegetables"));
-        this.animalsArrayJSON.add(this.animalsArray.get((this.animalsArray.size() -1)).getJSON());
-        this.insertAnimalInFile(this.animalsArray.get((this.animalsArray.size() -1)));
+    public void createAnimal(String name, int age, String species, boolean dangerous, String psychological,
+            String acquisitionMethod, int foodFrequencyPerDay, String allergies, String feeding) {
+        this.animalsArray
+                .add(new Animal(age, 12, name, species, dangerous, psychological, acquisitionMethod,
+                        foodFrequencyPerDay, allergies,
+                        feeding));
+        this.animalsArrayJSON.add(this.animalsArray.get((this.animalsArray.size() - 1)).getJSON());
+        this.insertAnimalInFile(this.animalsArray.get((this.animalsArray.size() - 1)));
         System.out.println("Nuevo animal añadido");
     }
-    public void insertAnimalInFile(Animal animal){
+
+    public void insertAnimalInFile(Animal animal) {
         try (FileWriter animalsRecordWrite = new FileWriter(filePath)) {
             animalsRecordWrite.write(this.animalsObject.toString());
             animalsRecordWrite.close();
@@ -54,6 +59,7 @@ public class GestionAnimal {
             System.out.println("Error");
         }
     }
+
     public void deleteAnimal() {
 
     }

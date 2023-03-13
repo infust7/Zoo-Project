@@ -15,7 +15,8 @@ public class Animal {
     private String feeding;
     private JSONObject animalJSON = new JSONObject();
 
-    public Animal(int age, int size, String name, String species, boolean dangerous, String psychological, String acquisitionMethod, int foodFrequencyPerDay, String allergies, String feeding) {
+    public Animal(int age, int size, String name, String species, boolean dangerous, String psychological,
+            String acquisitionMethod, int foodFrequencyPerDay, String allergies, String feeding) {
         this.age = age;
         this.size = size;
         this.name = name;
@@ -32,7 +33,8 @@ public class Animal {
         this.animalJSON.put("age", this.age);
         this.animalJSON.put("name", this.name);
         this.animalJSON.put("size", this.size);
-        this.animalJSON.put("species", this.dangerous);
+        this.animalJSON.put("species", this.species);
+        this.animalJSON.put("dangerous", this.dangerous);
         this.animalJSON.put("psychological", this.psychological);
         this.animalJSON.put("acquisitionMethod", this.acquisitionMethod);
         this.animalJSON.put("foodFrequencyPerDays", this.foodFrequencyPerDay);
