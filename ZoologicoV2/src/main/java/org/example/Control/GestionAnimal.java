@@ -4,6 +4,13 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import javax.annotation.processing.SupportedOptions;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+
 import org.example.Model.Animal;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -66,6 +73,17 @@ public class GestionAnimal {
 
     public void updateAnimal() {
 
+    }
+
+    public void tableAnimals(DefaultTableModel model) {
+        System.out.println("Bien");
+        if (this.animalsArray.isEmpty()) {
+            System.out.println("Vacion");
+            return;
+        }
+        for (int i = 0; i < this.animalsArray.size(); i++) {
+            model.addRow(this.animalsArray.get(i).getArray());
+        }
     }
 
     public void readAnimalFromFile() {

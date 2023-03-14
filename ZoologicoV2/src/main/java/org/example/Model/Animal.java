@@ -29,6 +29,14 @@ public class Animal {
         this.feeding = feeding;
     }
 
+    public Object[] getArray() {
+        Object[] arraylinear = {
+                this.age, this.name, this.species, this.dangerous, this.psychological, this.acquisitionMethod,
+                this.foodFrequencyPerDay, this.allergies, this.feeding
+        };
+        return arraylinear;
+    }
+
     public JSONObject getJSON() {
         this.animalJSON.put("age", this.age);
         this.animalJSON.put("name", this.name);
